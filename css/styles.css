@@ -479,20 +479,20 @@ form.my-form {
 form.my-form label {
   display: block;
   font-size: 0.8rem;
-  color: #172e3c;
+  color: #2A1810; /* High contrast color for labels */
   padding-top: 0.2rem;
 }
 
 h2 {
   font-size: 0.9rem;
-  color: #674C23;
+  color: #2A1810; /* High contrast color for headings */
   margin: 1.5rem 0 1rem 0;
   border-bottom: 1px solid #eee;
 }
 
 h3 {
   font-size: 0.9rem;
-  color: #674C23;
+  color: #2A1810; /* High contrast color for headings */
   margin: 1.5rem 0 1rem 0;
   border-bottom: 1px solid #eee;
 }
@@ -505,7 +505,7 @@ fieldset {
 }
 fieldset legend {
   font-size: 0.9rem;
-  color: #674C23;
+  color: #2A1810; /* High contrast color for legend */
   margin: 0 0 1rem 0;
   padding: 0;
   border-bottom: 1px solid #eee;
@@ -530,7 +530,7 @@ select {
   border-right-width: 5px;
   border-bottom-color: #555;
   font-size: 1rem;
-  color: #4281A4;
+  color: #1F4A5C; /* High contrast color for input text */
   width: 250px;
   padding: 0.5rem 10px;
 }

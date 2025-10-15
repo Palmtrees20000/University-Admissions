@@ -16,6 +16,10 @@ $ecru: #674C23;           // Ecru
 // Navigation specific colors for contrast compliance
 $activeNavColor: $bone;   // Light color for active nav on dark background (#E0D5C5)
 
+// High contrast colors for accessibility
+$highContrastText: #2A1810;  // Very dark brown for excellent contrast on white
+$highContrastInput: #1F4A5C; // Darker version of primary color for inputs
+
 $defaultFont: 'Spline Sans', 'Arial', 'Helvetica', sans-serif;
 $lightWeight: 300;
 $normalWeight: 500;
