@@ -451,7 +451,7 @@ nav li a {
   border-bottom: 1px solid #96C4C0;
 }
 nav li.active a {
-  color: #4281A4;
+  color: #674C23;
 }
 
 li a:hover {
@@ -483,11 +483,38 @@ form.my-form label {
   padding-top: 0.2rem;
 }
 
-h3 {
+h2 {
   font-size: 0.9rem;
-  color: #D4B483;
+  color: #674C23;
   margin: 1.5rem 0 1rem 0;
   border-bottom: 1px solid #eee;
+}
+
+h3 {
+  font-size: 0.9rem;
+  color: #674C23;
+  margin: 1.5rem 0 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Fieldset styling for accessibility compliance */
+fieldset {
+  border: none; /* Remove default border */
+  margin: 1.5rem 0 1rem 0; /* Match h2 spacing */
+  padding: 0; /* Remove default padding */
+}
+fieldset legend {
+  font-size: 0.9rem;
+  color: #674C23;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  width: 100%; /* Make border extend full width */
+  padding-bottom: 0.5rem;
+}
+fieldset label {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 input[type=text],
@@ -522,7 +549,7 @@ input:required:valid {
 
 input[type=submit] {
   border: none;
-  background-color: #4281A4;
+  background-color: #2D5770;
   color: white;
   border-radius: 1rem;
   padding: 0.75rem 1.5rem;
@@ -622,7 +649,7 @@ footer .legal a:hover {
     color: #2D5770;
   }
   nav li.active a {
-    color: #4281A4;
+    color: #E0D5C5; /* High contrast color for active nav */
     font-weight: bold;
   }
 }
@@ -697,7 +724,7 @@ footer .legal a:hover {
     color: #2D5770;
   }
   nav li.active a {
-    color: #4281A4;
+    color: #E0D5C5; /* High contrast color for active nav */
     font-weight: bold;
   }
 }/*# sourceMappingURL=styles.css.map */

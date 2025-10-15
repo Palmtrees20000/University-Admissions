@@ -146,7 +146,7 @@ nav {
         border-bottom: 1px solid $greyColor;
     }
     li.active a {
-        color: $secondaryColor;
+        color: $ecru;
     }
 }
 li a:hover {
@@ -180,12 +180,41 @@ form.my-form {
 
     }
 }
+h2{
+    font-size: .9rem;
+    color: $ecru;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #eee;
+}
 h3{
     font-size: .9rem;
     color: $ecru;
     margin: 1.5rem 0 1rem 0;
     border-bottom: 1px solid #eee;
 }
+
+/* Fieldset styling for accessibility compliance */
+fieldset {
+    border: none; /* Remove default border */
+    margin: 1.5rem 0 1rem 0; /* Match h2 spacing */
+    padding: 0; /* Remove default padding */
+    
+    legend {
+        font-size: .9rem;
+        color: $ecru;
+        margin: 0 0 1rem 0;
+        padding: 0;
+        border-bottom: 1px solid #eee;
+        width: 100%; /* Make border extend full width */
+        padding-bottom: 0.5rem;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
 input[type=text],
 input[type=tel],
 input[type=number],
@@ -217,7 +246,7 @@ input:required:valid {
 
 input[type=submit] {
     border: none;
-    background-color: #4281A4;
+    background-color: $primaryColor;
     color: white;
     border-radius: 1rem;
     padding: .75rem 1.5rem;

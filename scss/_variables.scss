@@ -11,7 +11,10 @@ $tiffanyBlue: #96C4C0;    // Tiffany Blue
 $timberwolf: #E4DFDA;     // Timberwolf
 $bone: #E0D5C5;           // Bone
 $dun: #DCCAAF;            // Dun
-$ecru: #D4B483;           // Ecru
+$ecru: #674C23;           // Ecru
+
+// Navigation specific colors for contrast compliance
+$activeNavColor: $bone;   // Light color for active nav on dark background (#E0D5C5)
 
 $defaultFont: 'Spline Sans', 'Arial', 'Helvetica', sans-serif;
 $lightWeight: 300;

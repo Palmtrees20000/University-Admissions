@@ -27,7 +27,7 @@
 <body>
 <div id="headerWrapper">
 	<header id="top"> <!-- copy for assignment-->
-        <img src="images/1x.png" width="44" height="44" alt="logo">
+        <img src="images/1x.png" width="44" height="44" alt="Jefferson University logo">
 		<span>Jefferson University</span>
         <a href="#navlinks">&#9776;</a> <!-- copy for assignment-->
 	</header>
@@ -42,13 +42,13 @@
         <p>If you have any questions about filling out this form, please contact our admissions office at (555) 123-4567.</p>
 
         <form methods="GET" action="thanks.html" class="my-form" autocomplete="on">
-            <h3>Personal Information</h3>
+            <h2>Personal Information</h2>
             <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
             <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
             <label>Email: <input type="email" name="email" autocomplete="email" required title="Email Here"></label>
             <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone Number Here"></label>
 
-            <h3>Address Information</h3>
+            <h2>Address Information</h2>
             <label>Street Address:<input type="text" name="address" autocomplete="street-address" required title="Street Address Here"></label>
             <label>City:<input type="text" name="city" autocomplete="address-level2" required title="City Here"></label>
 
@@ -111,18 +111,22 @@
 
             <label>Zipcode<input type="text" name="zipcode" required title="Zipcode Here"></label>
 
-            <h3>Highest level of completed education</h3>
-            <label><input type="checkbox" name="highschool"> High School</label>
-            <label><input type="checkbox" name="bachelors"> Bachelor's Degree</label>
-            <label><input type="checkbox" name="masters"> Master's Degree</label>
+            <fieldset>
+                <legend>Highest level of completed education</legend>
+                <label><input type="checkbox" name="highschool"> High School</label>
+                <label><input type="checkbox" name="bachelors"> Bachelor's Degree</label>
+                <label><input type="checkbox" name="masters"> Master's Degree</label>
+            </fieldset>
 
-            <h3>Communication Preferences</h3>
-            <label><input type="radio" name="contact" value="call"> Call</label>
-            <label><input type="radio" name="contact" value="text"> Text</label>
-            <label><input type="radio" name="contact" value="email"> Email</label>
-            <label><input type="radio" name="contact" value="mail"> Mail</label>
+            <fieldset>
+                <legend>Communication Preferences</legend>
+                <label><input type="radio" name="contact" value="call"> Call</label>
+                <label><input type="radio" name="contact" value="text"> Text</label>
+                <label><input type="radio" name="contact" value="email"> Email</label>
+                <label><input type="radio" name="contact" value="mail"> Mail</label>
+            </fieldset>
            
-            <h3>Create Account</h3>
+            <h2>Create Account</h2>
             <label>UserName (6 or more)<input type="text" required minlength="6" title="Please enter a username that is at least 6 characters long"></label>
             <label>Password (5-9 letters or numbers or more)<input type="password" name="password" required pattern="[A-Za-z0-9]{5,9}" title="Please enter a password that is at least 5 letters or numbers long and no more than 9 characters long"></label>
 

@@ -74,7 +74,7 @@ nav {
         color: $primaryColor;
     }
     li.active a {
-        color: $secondaryColor;
+        color: $activeNavColor; /* High contrast color for active nav */
         font-weight: bold;
     }
 }
