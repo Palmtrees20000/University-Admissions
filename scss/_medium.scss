@@ -1,0 +1,80 @@
+/* NAVIGATION STUFF GOES HERE  */
+// copy for assignment
+body {
+    display: grid; /* Use CSS Grid for layout control */
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "footer"; /* Define the order we want */
+    grid-template-rows: auto auto 1fr auto; /* Header, nav, main (flexible), footer */
+}
+
+/* Assign grid areas to each section */
+#headerWrapper {
+    grid-area: header;
+}
+
+#navWrapper {
+    grid-area: navigation;
+}
+
+#mainWrapper {
+    grid-area: main;
+}
+
+#footerWrapper {
+    grid-area: footer;
+}
+
+/* Hide hamburger menu on medium and larger screens */
+#top a {
+    display: none !important; /* Hide hamburger menu */
+}
+
+/* Position navigation below header on medium+ screens */
+div#navWrapper {
+    display: block !important; /* Show navigation wrapper */
+    position: relative; /* Use relative positioning */
+    z-index: 100; /* Ensure it appears above content */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    width: 100%; /* Full width container */
+    background-color: $primaryColor; /* Background extends full width */
+}
+
+/* Hide close button on medium+ screens */
+#navlinks > a {
+    display: none !important;
+}
+
+/* Navigation styling for medium screens */
+nav {
+    height: auto;
+    background-color: transparent; /* Remove nav background - wrapper handles it */
+    padding: 0.5rem 0; /* Small padding */
+    position: static; /* Normal flow within the wrapper */
+    width: 100%; /* Full width */
+    ul {
+        display: flex; /* Horizontal layout */
+        justify-content: flex-end; /* Align to the right */
+        max-width: $containerMaxWidth; /* Match container width */
+        margin: 0 auto; /* Center the container */
+        padding-right: 2rem; /* Add some right padding */
+    }
+    li a {
+        border: none;
+        color: white; /* Use primary color instead of white */
+        padding: 0.75rem 1.5rem; /* Adjust padding for horizontal layout */
+        border-bottom: none; /* Remove bottom border */
+        text-align: center; /* Center text in links */
+    }
+    li a:hover {
+        background-color: #eee;
+        color: $primaryColor;
+    }
+    li.active a {
+        color: $secondaryColor;
+        font-weight: bold;
+    }
+}

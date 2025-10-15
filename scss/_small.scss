@@ -1,0 +1,259 @@
+/* --------------------------- Copy for assignement --------------------------- */
+
+/* Global body and html reset for proper centering */
+html {
+    width: 100%;
+    height: 100%;
+    /* NO smooth scrolling - we want instant jump */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $primaryColor;
+    background-color: #fff;
+    display: grid; //copy for assignment
+    /* Small screen layout - navigation stays at bottom */
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        "navigation"; /* Navigation at bottom for small screens */
+    grid-template-rows: auto 1fr auto auto; /* Header, main (flexible), footer, nav */
+}
+
+/* Assign grid areas for small screens */
+#headerWrapper {
+    grid-area: header;
+}
+
+#navWrapper {
+    grid-area: navigation;
+}
+
+#mainWrapper {
+    grid-area: main;
+}
+
+#footerWrapper {
+    grid-area: footer;
+}
+
+
+/* Apply natural box layout model to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px; //copy for assignment
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+/* --------------------------- HEADER & NAVIGATION --------------------------- */
+#headerWrapper {
+    background: #f5f5f5;
+    width: 100%;
+}
+
+header {
+    padding: 10px;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    min-height: 70px;
+    width: 100%;
+    
+    // Logo stays on the left
+    a {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        
+        img {
+            height: auto;
+            max-height: 75px; // Restored to original height from HTML
+        }
+    }
+}
+
+// copy for assignment
+/* Navigation positioned below footer for small screens */
+div#navWrapper {
+    display: block; /* Show navigation on small screens */
+    padding-top: 1rem;
+}
+
+/* Hamburger menu styling - visible on small screens */
+#top a {
+    display: block;
+    text-align: right;  
+    font-size: 2rem;
+    height: 44px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Close button in navigation */
+#navlinks > a {
+    display: block;
+    text-align: right;
+    font-size: 1.6rem;
+    height: 44px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 13px 0 0;
+}
+
+nav {
+    height: 100vh; /* Fill the entire viewport height */
+    width: 100%; /* Fill the container width */
+    background-color: #172e3c;
+    padding: 1rem 0;
+    /* Removed fixed positioning - stays in document flow below footer */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li a {
+        display: block;
+        color: white;
+        padding: .9rem 2vw;
+        text-decoration: none;
+        text-align: right;
+        border-bottom: 1px solid $greyColor;
+    }
+    li.active a {
+        color: $secondaryColor;
+    }
+}
+li a:hover {
+    background-color: #eee;
+    color: $primaryColor;
+}
+/* --------------------------- MAIN CONTENT WRAPPER --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+/* --------------------------- FORM STYLES --------------------------- */
+form.my-form {
+    margin: 1rem $gutter;
+
+    label{
+        display: block;
+        font-size: .8rem;
+        color: #172e3c;
+        padding-top: .2rem;
+
+    }
+}
+h3{
+    font-size: .9rem;
+    color: $ecru;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=email],
+input[type=password], 
+select {
+    display: block;
+    margin: 0 0 1rem 0;
+    border: 1px solid #999;
+    border-radius: 3px 3px 0 0;
+    border-right-width: 5px;
+    border-bottom-color: #555;
+    font-size: 1rem;
+    color: #4281A4;
+    width: 250px;
+    padding: .5rem $gutter;
+}
+
+input:required {
+    border-right-color: rgba(255, 0, 0, 0.649);  // make sure to change the bottom border with the entire border to make the webpage different than the example 
+    
+}
+input:focus {
+    border-right-color: grey;
+}
+input:required:valid {
+    border-right-color: green;
+}
+
+input[type=submit] {
+    border: none;
+    background-color: #4281A4;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    width: 250px;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+
+/* --------------------------- FOOTER CENTERING --------------------------- */
+#footerWrapper {
+    width: 100%;
+}
+
+footer {
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    padding: $containerPadding;
+    text-align: center; // Center the footer content
+    
+    .legal {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.5;
+        
+        a {
+            color: $primaryColor;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+

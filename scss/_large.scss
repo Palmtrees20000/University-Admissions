@@ -1,0 +1,87 @@
+/* Use CSS Grid for layout control on large screens */
+body {
+    display: grid; /* Use CSS Grid for layout control */
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "footer"; /* Define the order we want */
+    grid-template-rows: auto auto 1fr auto; /* Header, nav, main (flexible), footer */
+}
+
+/* Assign grid areas to each section */
+#headerWrapper {
+    grid-area: header;
+}
+
+#navWrapper {
+    grid-area: navigation;
+}
+
+#mainWrapper {
+    grid-area: main;
+}
+
+#footerWrapper {
+    grid-area: footer;
+}
+
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+
+/* Hide hamburger menu on large screens */
+#top a {
+    display: none !important; /* Hide hamburger menu */
+}
+
+/* Position navigation below header on large screens */
+div#navWrapper {
+    display: block !important; /* Show navigation wrapper */
+    position: relative; /* Use relative positioning */
+    z-index: 100; /* Ensure it appears above content */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    width: 100%; /* Full width container */
+    background-color: $primaryColor; /* Background extends full width */
+}
+
+/* Hide close button on large screens */
+#navlinks > a {
+    display: none !important; /* Hide close button */
+}
+
+/* Navigation styling for large screens */
+nav {
+    background-color: transparent; /* Remove nav background - wrapper handles it */
+    height: auto;
+    position: static; /* Normal flow within wrapper */
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid $greyColor;
+    ul {
+        display: flex; /* Horizontal layout */
+        justify-content: flex-end; /* Align to the right */
+        max-width: 960px; /* Match large screen container */
+        margin: 0 auto; /* Center the container */
+        padding-right: 2rem; /* Add some right padding */
+    }
+    li a {
+        color: white; /* Use primary color */
+        padding: 0.75rem 1.5rem; /* Horizontal spacing */
+        border: none;
+        border-bottom: none;
+        text-align: center;
+    }
+    li a:hover {
+        background-color: #eee;
+        color: $primaryColor;
+    }
+    li.active a {
+        color: $secondaryColor;
+        font-weight: bold;
+    }
+}
