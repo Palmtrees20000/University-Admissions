@@ -49,12 +49,12 @@
             <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone Number Here"></label>
 
             <h2>Address Information</h2>
-            <label>Street Address:<input type="text" name="address" autocomplete="street-address" required title="Street Address Here"></label>
-            <label>City:<input type="text" name="city" autocomplete="address-level2" required title="City Here"></label>
+            <label>Street Address:<input type="text" name="address" autocomplete="street-address" title="Street Address Here"></label>
+            <label>City:<input type="text" name="city" autocomplete="address-level2" title="City Here"></label>
 
         
             <label>State
-                <select name=>
+                <select name="state">
                     <option value="No Selection Made">Please Select</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -109,14 +109,34 @@
                 </select>
             </label>
 
-            <label>Zipcode<input type="text" name="zipcode" required title="Zipcode Here"></label>
+            <label>Zipcode<input type="text" name="zipcode" title="Zipcode Here"></label>
 
             <fieldset>
-                <legend>Highest level of completed education</legend>
+                <h2>Highest level of completed education</h2>
                 <label><input type="checkbox" name="highschool"> High School</label>
                 <label><input type="checkbox" name="bachelors"> Bachelor's Degree</label>
                 <label><input type="checkbox" name="masters"> Master's Degree</label>
             </fieldset>
+
+            <h2>Educational Background</h2>
+            <label>Previous School
+                <select name="previousschool" required>
+                    <option value="">Please Select</option>
+                    <option value="Public High School">Public High School</option>
+                    <option value="Private High School">Private High School</option>
+                    <option value="Charter School">Charter School</option>
+                    <option value="Homeschool">Homeschool</option>
+                    <option value="Online School">Online School</option>
+                    <option value="Community College">Community College</option>
+                    <option value="Four-Year College/University">Four-Year College/University</option>
+                    <option value="Trade/Technical School">Trade/Technical School</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>High School Graduation Date
+                <input type="date" name="graduationdate" required title="Please enter your high school graduation date">
+            </label>
 
             <fieldset>
                 <legend>Communication Preferences</legend>
@@ -127,8 +147,8 @@
             </fieldset>
            
             <h2>Create Account</h2>
-            <label>UserName (6 or more)<input type="text" required minlength="6" title="Please enter a username that is at least 6 characters long"></label>
-            <label>Password (5-9 letters or numbers or more)<input type="password" name="password" required pattern="[A-Za-z0-9]{5,9}" title="Please enter a password that is at least 5 letters or numbers long and no more than 9 characters long"></label>
+            <label>Username (5-10 letters only)<input type="text" name="username" required pattern="[A-Za-z]{5,10}" title="Please enter a username with 5-10 letters only"></label>
+            <label>Password (6 or more characters)<input type="password" name="password" required minlength="6" title="Please enter a password that is at least 6 characters long"></label>
 
             <input type="submit" value="Create my Account">
         </form>

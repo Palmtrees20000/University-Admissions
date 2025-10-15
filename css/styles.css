@@ -522,6 +522,7 @@ input[type=tel],
 input[type=number],
 input[type=email],
 input[type=password],
+input[type=date],
 select {
   display: block;
   margin: 0 0 1rem 0;
